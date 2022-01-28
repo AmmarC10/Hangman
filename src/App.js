@@ -9,7 +9,7 @@ import { showNotification as show, checkWin } from './helpers/helpers';
 
 import './App.css';
 
-const words = ['javascript', 'react','ryerson','playstation','controller', 'application', 'programming', 'interface', 'wizard'];
+const words = ['javascript', 'react','ryerson','playstation','controller', 'application', 'programming', 'interface', 'wizard']; // words to play from
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 function App() {
@@ -22,18 +22,18 @@ function App() {
     const handleKeydown = event => {
       const { key, keyCode } = event;
       if (playable && keyCode >= 65 && keyCode <= 90) {
-        const letter = key.toLowerCase();
+        const letter = key.toLowerCase(); // gets user input key
         if (selectedWord.includes(letter)) {
           if (!correctLetters.includes(letter)) {
-            setCorrectLetters(currentLetters => [...currentLetters, letter]);
+            setCorrectLetters(currentLetters => [...currentLetters, letter]); // add letter to correct letters if not already there
           } else {
-            show(setShowNotification);
+            show(setShowNotification); // show notification if letter has already been pressed
           }
         } else {
-          if (!wrongLetters.includes(letter)) {
-            setWrongLetters(currentLetters => [...currentLetters, letter]);
+          if (!wrongLetters.includes(letter)) { 
+            setWrongLetters(currentLetters => [...currentLetters, letter]); // adds letter to wrong letters if not already there
           } else {
-            show(setShowNotification);
+            show(setShowNotification); // shows notification if letter is already entered
           }
         }
       }
@@ -49,7 +49,8 @@ function App() {
     // Empty Arrays
     setCorrectLetters([]);
     setWrongLetters([]);
-
+    
+    // Select new word
     const random = Math.floor(Math.random() * words.length);
     selectedWord = words[random];
   }
