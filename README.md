@@ -5,14 +5,6 @@ Original code from [Brad Traversy](https://github.com/bradtraversy/vanillawebpro
 I did this project following a youtube video by Traversy Media, to familiarize myself with React.
 ## How To Play The Game
 
-Select a letter to figure out a hidden word in a set amount of chances
+Select a letter to figure out a hidden word, you are only given 5 chances
 
-## Project Specifications
 
-- Display hangman pole and figure using SVG
-- Generate a random word
-- Display word in UI with correct letters
-- Display wrong letters
-- Show notification when select a letter twice
-- Show popup on win or lose
-- Play again button to reset game
